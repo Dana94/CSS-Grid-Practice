@@ -16,7 +16,7 @@ h3 {
   grid-template-rows: 20% 60% 20%;
   /*grid-template-areas: "header header header" "main content sidebar" "footer footer footer";*/
   /*or in 1 statement*/
-  grid-template: "header header header" 20% "content content content" 60%
+  grid-template: "header header main" 20% "content content content" 60%
     "footer footer footer" 20% / 15% 70% 15%;
 
   /*gap: 6%;*/
@@ -51,6 +51,7 @@ h3 {
   grid-area: main;
   background-color: rgb(242, 242, 242);
   color: #61373c;
+  /*padding: 1rem;*/
 
   /*works b/c the grid auto creates it*/
   /*grid-column: 5 / 6; 
@@ -138,11 +139,39 @@ h3 {
   grid-area: des;
 }
 
+.fa-paint-brush {
+  /*font-size: 3rem;
+  width: 2em;
+  text-align: center;
+  height: 100%;
+  margin-top: 1rem;*/
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none;
+}
+
+.icons .fas {
+  font-size: 3rem;
+  width: 2em;
+  text-align: center;
+  height: 100%;
+  margin-top: 1rem;
+  color: black;
+}
+i.fa-code {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .container {
     grid-template-areas: "header header main" "content content content"
-      "footer footer sidebar";
-    grid-template-columns: 40% 40% 20%;
+      "footer footer footer";
+    grid-template-columns: 15% 60% 15%;
   }
 
   .content {
@@ -150,6 +179,13 @@ h3 {
   }
 
   .images {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
+  }
+
+  .img2 {
+    grid-column-start: auto;
+    grid-column-end: auto;
+    grid-row-start: 3;
+    grid-row-end: 7;
   }
 }
